@@ -26,7 +26,7 @@ export function NoteForm({onSubmit,onAddTag,availableTags}:NoteFormProps){
     const titleRef = useRef<HTMLInputElement>(null)
     const markdownRef = useRef<HTMLTextAreaElement>(null)
     const [selectedTags,setSelectedTags] = useState<Tag[] >([])
-
+    const navigate = useNavigate()
 
     function handleSubmit(e:FormEvent){
         e.preventDefault();
@@ -36,7 +36,7 @@ export function NoteForm({onSubmit,onAddTag,availableTags}:NoteFormProps){
             tags:selectedTags
         })
 
-//    navigate("..")
+  navigate("..")
     
     }
 
